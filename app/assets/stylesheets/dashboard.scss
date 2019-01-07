@@ -1,19 +1,46 @@
-// Place all the styles related to the dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-#dashboard-food-items {
-  background-color: red;
+.container {
+  display: flex;
 }
 
-#dashboard-prepper {
-  background-color: yellow;
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.card {
+  border-top: white;
+  border-right: white;
+  border-left: white;
+}
+
+.meal-day-card {
+  border: #cdcdcd medium solid;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .list-group-item {
-  color: black;
+  border-left: 1px black;
+}
+.meal-day-column {
+
 }
 
-.container {
-  display: flex;
-  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+.food-item-list {
+  border: #cdcdcd medium solid;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+#dashboard-header{
+  text-align: center;
+}
+
+#food-list-table {
+  padding-left: 25px;
+}
+
+#food-list-header {
+  padding-bottom: 10px;
 }
