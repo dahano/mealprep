@@ -13,6 +13,19 @@
   border-left: white;
 }
 
+// doesnt include top input elem due to alignment. Will fix later
+.amount-input-secondary {
+  margin-top: 15px;
+}
+
+.amount-input-main, .amount-input-secondary {
+  margin-left: 5px;
+}
+
+.amount-input-bottom {
+  margin-bottom: 5px;
+}
+
 .meal-day-card {
   border: #cdcdcd medium solid;
   border-radius: 10px;
@@ -23,12 +36,8 @@
 .list-group-item {
   border-left: 1px black;
 }
-.meal-day-column {
-
-}
 
 .food-item-list {
-  border: #cdcdcd medium solid;
   border-radius: 10px;
   margin-top: 25px;
 }
@@ -43,4 +52,9 @@
 
 #food-list-header {
   padding-bottom: 10px;
+}
+
+#search-form {
+  margin-left: 25px;
+  padding-bottom: 25px;
 }

@@ -13,17 +13,17 @@
     </div>
   </nav>
   <div class="row">
-    <div class="col-4 food-item-list" style="background-color: white;">
+    <div class="col-4 food-item-list">
       <div class="meow">
-        <form class="form-inline my-2 my-lg-0" id="search-form">
+        <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search food items" aria-label="Search">
-          <div class="input-group-append" style="margin-right: 5px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <div class="input-group-append" style="margin-left: 5px;">
             <button class="btn btn-outline-success" type="button">g</button>
             <button class="btn btn-outline-success" type="button">oz</button>
           </div>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <ul class="list-group list-group-flush sortable" style="margin-left:20px;">
+        <ul class="list-group list-group-flush sortable">
           <li class="ui-state-default list-group-item">Vegetable</li>
           <li class="ui-state-default list-group-item">Carb</li>
           <li class="ui-state-default list-group-item">Protein</li>
@@ -48,7 +48,8 @@
       </div>
     </div>
     <div class="container">
-        <!-- COLUMN ONE STARTS HERE -->
+      <div class="meal-day-columns">
+      <!-- COLUMN ONE STARTS HERE -->
         <div class="col-4">
           <div class="card meal-day-card">
             <img class="card-img-top" src="http://placekitten.com/150/200" alt="Card image cap">
@@ -87,33 +88,15 @@
           <div class="card meal-day-card">
             <img class="card-img-top" src="http://placekitten.com/150/200" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Meal #1</h5>
+              <h5 class="card-title">Meal #2</h5>
               <p class="card-text">Meal summary here this is not a sortable section</p>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group amount-input-main">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control input-sm" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control input-sm" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-                <div class="input-group amount-input-secondary amount-input-bottom">
-                  <input type="text" class="form-control input-sm" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-              </div>
-              <div class="col-6">
-                <ul class="list-group list-group-flush sortable">
-                  <li class="ui-state-default list-group-item">Vegetable here</li>
-                  <li class="ui-state-default list-group-item">Carb here</li>
-                  <li class="ui-state-default list-group-item">Protein here</li>
-                  <li class="ui-state-default list-group-item">Fat here</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="list-group list-group-flush sortable">
+              <li class="ui-state-default list-group-item">Vegetable here</li>
+              <li class="ui-state-default list-group-item">Carb here</li>
+              <li class="ui-state-default list-group-item">Protein here</li>
+              <li class="ui-state-default list-group-item">Fat here</li>
+            </ul>
           </div>
         </div>
         <!-- COLUMN THREE CARD STARTS HERE -->
@@ -121,34 +104,17 @@
           <div class="card meal-day-card">
             <img class="card-img-top" src="http://placekitten.com/150/200" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Meal #1</h5>
+              <h5 class="card-title">Meal #2</h5>
               <p class="card-text">Meal summary here this is not a sortable section</p>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group amount-input-main">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control input-sm" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control input-sm" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-                <div class="input-group amount-input-secondary amount-input-bottom">
-                  <input type="text" class="form-control input-sm" placeholder="0" aria-describedby="basic-addon2">
-                </div>
-              </div>
-              <div class="col-6">
-                <ul class="list-group list-group-flush sortable">
-                  <li class="ui-state-default list-group-item">Vegetable here</li>
-                  <li class="ui-state-default list-group-item">Carb here</li>
-                  <li class="ui-state-default list-group-item">Protein here</li>
-                  <li class="ui-state-default list-group-item">Fat here</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="list-group list-group-flush sortable">
+              <li class="ui-state-default list-group-item">Vegetable here</li>
+              <li class="ui-state-default list-group-item">Carb here</li>
+              <li class="ui-state-default list-group-item">Protein here</li>
+              <li class="ui-state-default list-group-item">Fat here</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </div>
