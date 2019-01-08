@@ -1,198 +1,114 @@
 <div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">MealPrep</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
+  <div class="row header-row">
+    <div class="col-8">
+      <!-- Meal Table -->
+      <div class="table-responsive-sm">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Search for food item</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </td>
+              <th scope="col">Amount</th>
+              <th scope="col">Protein</th>
+              <th scope="col">Fat</th>
+              <th scope="col">Carbs</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Salmon</td>
+              <td>75g</td>
+              <td>22g</td>
+              <td>18g</td>
+              <td>0g</td>
+              <td><button type="button" class="btn btn-success">+ Add item</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </nav>
-  <div class="row">
-    <div class="col-4 food-item-list" style="background-color: white;">
-      <div class="meow">
-        <form class="form-inline my-2 my-lg-0" id="search-form">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search food items" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <ul class="list-group list-group-flush sortable" style="margin-left:20px;">
-          <li class="ui-state-default list-group-item">Vegetable</li>
-          <li class="ui-state-default list-group-item">Carb</li>
-          <li class="ui-state-default list-group-item">Protein</li>
-          <li class="ui-state-default list-group-item">Fat</li>
-          <li class="ui-state-default list-group-item">Vegetable</li>
-          <li class="ui-state-default list-group-item">Carb</li>
-          <li class="ui-state-default list-group-item">Protein</li>
-          <li class="ui-state-default list-group-item">Fat</li>
-          <li class="ui-state-default list-group-item">Vegetable</li>
-          <li class="ui-state-default list-group-item">Carb</li>
-          <li class="ui-state-default list-group-item">Protein</li>
-          <li class="ui-state-default list-group-item">Fat</li>
-          <li class="ui-state-default list-group-item">Vegetable</li>
-          <li class="ui-state-default list-group-item">Carb</li>
-          <li class="ui-state-default list-group-item">Protein</li>
-          <li class="ui-state-default list-group-item">Fat</li>
-          <li class="ui-state-default list-group-item">Vegetable</li>
-          <li class="ui-state-default list-group-item">Carb</li>
-          <li class="ui-state-default list-group-item">Protein</li>
-          <li class="ui-state-default list-group-item">Fat</li>
+    <div class="col-2">
+      <!-- Daily Summary Card  -->
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><h2>Average Daily Macro Summary</h2></li>
+          <li class="list-group-item">Protein: 0g</li>
+          <li class="list-group-item">Fat: 0g</li>
+          <li class="list-group-item">Carbs: 0g</li>
         </ul>
       </div>
     </div>
-    <div class="container">
-        <!-- COLUMN ONE STARTS HERE -->
-        <div class="col-4">
-          <div class="card meal-day-card">
-            <img class="card-img-top" src="http://placekitten.com/150/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Meal #1</h5>
-              <p class="card-text">Meal summary here this is not a sortable section</p>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group amount-input-main">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary amount-input-bottom">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <ul class="list-group list-group-flush sortable">
-                  <li class="ui-state-default list-group-item">Vegetable here</li>
-                  <li class="ui-state-default list-group-item">Carb here</li>
-                  <li class="ui-state-default list-group-item">Protein here</li>
-                  <li class="ui-state-default list-group-item">Fat here</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- COLUMN TWO CARD STARTS HERE -->
-        <div class="col-4">
-          <div class="card meal-day-card">
-            <img class="card-img-top" src="http://placekitten.com/150/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Meal #1</h5>
-              <p class="card-text">Meal summary here this is not a sortable section</p>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group amount-input-main">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary amount-input-bottom">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <ul class="list-group list-group-flush sortable">
-                  <li class="ui-state-default list-group-item">Vegetable here</li>
-                  <li class="ui-state-default list-group-item">Carb here</li>
-                  <li class="ui-state-default list-group-item">Protein here</li>
-                  <li class="ui-state-default list-group-item">Fat here</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- COLUMN THREE CARD STARTS HERE -->
-        <div class="col-4">
-          <div class="card meal-day-card">
-            <img class="card-img-top" src="http://placekitten.com/150/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Meal #1</h5>
-              <p class="card-text">Meal summary here this is not a sortable section</p>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group amount-input-main">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-                <div class="input-group amount-input-secondary amount-input-bottom">
-                  <input type="text" class="form-control" placeholder="0" aria-describedby="basic-addon2">
-                  <div class="input-group-append" style="margin-right: 5px;">
-                    <button class="btn btn-outline-success" type="button">g</button>
-                    <button class="btn btn-outline-success" type="button">oz</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <ul class="list-group list-group-flush sortable">
-                  <li class="ui-state-default list-group-item">Vegetable here</li>
-                  <li class="ui-state-default list-group-item">Carb here</li>
-                  <li class="ui-state-default list-group-item">Protein here</li>
-                  <li class="ui-state-default list-group-item">Fat here</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
+<!-- Daily Row  -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- -- -- ---->
+  <div class="row daily-row" style="background-color: #5dae5c">
+    <!-- Meal Summary Card  -->
+    <div class="card daily-card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h2>Meal 1 Summary</h2></li>
+        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
+        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
+        <li class="list-group-item">Salmon 75g</li>
+        <li class="list-group-item">Lentils 25g</li>
+        <li class="list-group-item">Almonds 32g</li>
+      </ul>
     </div>
+    <!-- Meal Summary Card  -->
+    <div class="card daily-card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h2>Meal 2 Summary</h2></li>
+        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
+        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
+        <li class="list-group-item">Salmon 75g</li>
+        <li class="list-group-item">Lentils 25g</li>
+        <li class="list-group-item">Almonds 32g</li>
+      </ul>
+    </div>
+    <!-- Meal Summary Card  -->
+    <div class="card daily-card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h2>Meal 3 Summary</h2></li>
+        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
+        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
+        <li class="list-group-item">Salmon 75g</li>
+        <li class="list-group-item">Lentils 25g</li>
+        <li class="list-group-item">Almonds 32g</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Daily Row  -->
+  <div class="row daily-row">
+    <!-- Meal Summary Card  -->
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h2>Meal 1 Summary</h2></li>
+        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
+        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
+        <li class="list-group-item">Salmon 75g</li>
+        <li class="list-group-item">Lentils 25g</li>
+        <li class="list-group-item">Almonds 32g</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Daily Row  -->
+  <div class="row daily-row" style="background-color: #5dae5c">
+    <!-- Meal Summary Card  -->
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h2>Meal 1 Summary</h2></li>
+        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
+        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
+        <li class="list-group-item">Salmon 75g</li>
+        <li class="list-group-item">Lentils 25g</li>
+        <li class="list-group-item">Almonds 32g</li>
+      </ul>
+    </div>
+  </div>
+</div>
