@@ -1,118 +1,28 @@
 <div class="container-fluid">
   <div class="row header-row">
     <div class="col-8">
-      <!-- Meal Table -->
+      <!--  Rendering view for search -->
       <div class="table-responsive-sm">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Search for food item</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <form class="form-inline">
-                  <%= form_tag(food_item_search_path, method: :get) do %>
-                    <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2" ) %>
-                    <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
-                    Search
-                    <% end %>
-                  <% end %>
-                </form>
-              </td>
-              <th scope="col">Amount</th>
-              <th scope="col">Protein</th>
-              <th scope="col">Fat</th>
-              <th scope="col">Carbs</th>
-              <th></th>
-            </tr>
-            <tr>
-              <td><%= @result.name %></td>
-              <td>1g</td>
-              <td><%= @result.protein %></td>
-              <td><%= @result.fat %></td>
-              <td><%= @result.carbs %></td>
-              <td><button type="button" class="btn btn-success">+ Add item</button></td>
-            </tr>
-          </tbody>
-        </table>
+        <%= render 'application_partials/search' %>
       </div>
     </div>
     <div class="col-2">
-      <!-- Daily Summary Card  -->
-      <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><h2>Average Daily Macro Summary</h2></li>
-          <li class="list-group-item">Protein: 0g</li>
-          <li class="list-group-item">Fat: 0g</li>
-          <li class="list-group-item">Carbs: 0g</li>
-        </ul>
-      </div>
+      <!-- Rendering view for Daily Summary Card  -->
+      <%= render 'application_partials/daily_summary_card' %>
     </div>
   </div>
-<!-- Daily Row  -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- -- -- ---->
+  <!-- Daily Row  -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- -- -- ---->
   <div class="row daily-row" style="background-color: #5dae5c">
-    <!-- Meal Summary Card  -->
-    <div class="card daily-card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Meal 1 Summary</h2></li>
-        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
-        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
-        <li class="list-group-item">Salmon 75g</li>
-        <li class="list-group-item">Lentils 25g</li>
-        <li class="list-group-item">Almonds 32g</li>
-      </ul>
-    </div>
-    <!-- Meal Summary Card  -->
-    <div class="card daily-card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Meal 2 Summary</h2></li>
-        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
-        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
-        <li class="list-group-item">Salmon 75g</li>
-        <li class="list-group-item">Lentils 25g</li>
-        <li class="list-group-item">Almonds 32g</li>
-      </ul>
-    </div>
-    <!-- Meal Summary Card  -->
-    <div class="card daily-card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Meal 3 Summary</h2></li>
-        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
-        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
-        <li class="list-group-item">Salmon 75g</li>
-        <li class="list-group-item">Lentils 25g</li>
-        <li class="list-group-item">Almonds 32g</li>
-      </ul>
-    </div>
+    <%= render 'application_partials/daily_meal_card' %>
+    <%= render 'application_partials/daily_meal_card' %>
+    <%= render 'application_partials/daily_meal_card' %>
   </div>
-  <!-- Daily Row  -->
+  <!-- Daily Row  -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- -- -- ---->
   <div class="row daily-row">
-    <!-- Meal Summary Card  -->
-    <div class="card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Meal 1 Summary</h2></li>
-        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
-        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
-        <li class="list-group-item">Salmon 75g</li>
-        <li class="list-group-item">Lentils 25g</li>
-        <li class="list-group-item">Almonds 32g</li>
-      </ul>
-    </div>
+    <%= render 'application_partials/daily_meal_card' %>
   </div>
-  <!-- Daily Row  -->
+  <!-- Daily Row  -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- -- -- ---->
   <div class="row daily-row" style="background-color: #5dae5c">
-    <!-- Meal Summary Card  -->
-    <div class="card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h2>Meal 1 Summary</h2></li>
-        <button type="button" class="btn btn-success add-meal-button">+ Add new meal</button>
-        <li class="list-group-item">Protein: 0g | Fat: 0g | Carbs: 0g</li>
-        <li class="list-group-item">Salmon 75g</li>
-        <li class="list-group-item">Lentils 25g</li>
-        <li class="list-group-item">Almonds 32g</li>
-      </ul>
-    </div>
+    <%= render 'application_partials/daily_meal_card' %>
   </div>
 </div>

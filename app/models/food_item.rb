@@ -1,6 +1,7 @@
 class FoodItem < ApplicationRecord
 
   def self.find_food_item_name(item_name)
+    puts "did i get here?"
     @name = FoodItem.where(name: "#{item_name}").first
   end
 
