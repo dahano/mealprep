@@ -13,8 +13,12 @@
             <tr>
               <td>
                 <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <%= form_tag(food_item_search_path, method: :get) do %>
+                    <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2" ) %>
+                    <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
+                    Search
+                    <% end %>
+                  <% end %>
                 </form>
               </td>
               <th scope="col">Amount</th>
@@ -24,11 +28,11 @@
               <th></th>
             </tr>
             <tr>
-              <td>Salmon</td>
-              <td>75g</td>
-              <td>22g</td>
-              <td>18g</td>
-              <td>0g</td>
+              <td><%= @result.name %></td>
+              <td>1g</td>
+              <td><%= @result.protein %></td>
+              <td><%= @result.fat %></td>
+              <td><%= @result.carbs %></td>
               <td><button type="button" class="btn btn-success">+ Add item</button></td>
             </tr>
           </tbody>
