@@ -1,10 +1,9 @@
 class SearchController < ApplicationController
-  def search_fn
-    render json: "SEARCHY TIME"
+  def search
+    @macro = FoodItem.where(name: "#{params[:name]}").first
+    
   end
 
   def create_item
-    puts "MEOW MEOW"
-    render('dashboard/meow')
   end
 end
