@@ -1,0 +1,22 @@
+<!-- Too much logic for partial? maybe. -->
+<% if @result.nil? %>
+  <% if params[:search].blank? %>
+    <td></td>
+  <% else %>
+    <td>
+      Sorry, I couldnt find "<%= params[:search] %>"
+      <button type="button" class="btn btn-success">+ create item?</button>
+    </td>
+  <% end %>
+  <td>0g</td>
+  <td>0g</td>
+  <td>0g</td>
+  <td>0g</td>
+<% else %>
+  <td><%= @result.name %></td>
+  <td>1g</td>
+  <td><%= @result.protein %></td>
+  <td><%= @result.fat %></td>
+  <td><%= @result.carbs %></td>
+  <td><button type="button" class="btn btn-success">+ Add item</button></td>
+<% end %>

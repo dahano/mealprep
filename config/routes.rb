@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  post 'food_item/add_item'
-  get 'food_item/search_for'
-  get 'search/search_for'
-  root :to => 'dashboard#index'
+  get 'search/search_fn'
+  root 'application#index'
+  get 'dashboard', to: 'dashboard#index', as: :dashboard
+  get 'create_item' => 'search#create_item'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

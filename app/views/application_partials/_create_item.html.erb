@@ -1,0 +1,6 @@
+<form class="form-inline">
+  <%= form_tag("/search/create_item", method: "get") do %>
+    <%= text_field_tag(:create, params[:create], placeholder: "Add Item", class: "form-control mr-sm-2" ) %>
+    <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+  <% end %>
+</form>

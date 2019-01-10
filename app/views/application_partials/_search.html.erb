@@ -1,34 +1,28 @@
 <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Search for food item</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <form class="form-inline">
-                  <%= form_tag('/search/search_for', method: :get) do %>
-                    <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2" ) %>
-                    <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
-                    Search
-                    <% end %>
-                  <% end %>
-                </form>
-              </td>
-              <th scope="col">Amount</th>
-              <th scope="col">Protein</th>
-              <th scope="col">Fat</th>
-              <th scope="col">Carbs</th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>Salmon</td>
-              <td>75g</td>
-              <td>22g</td>
-              <td>18g</td>
-              <td>0g</td>
-              <td><button type="button" class="btn btn-success">+ Add item</button></td>
-            </tr>
-          </tbody>
-        </table>
+  <thead>
+    <tr>
+      <th scope="col">Search for food item</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <form class="form-inline">
+          <%= form_tag(controller: "search", action: "search_fn", method: "get", class: "nifty_form") do %>
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+        </form>
+      </td>
+      <th scope="col">Amount</th>
+      <th scope="col">Protein</th>
+      <th scope="col">Fat</th>
+      <th scope="col">Carbs</th>
+      <th></th>
+    </tr>
+    <tr>
+      <%= render "application_partials/search_results" %>
+    </tr>
+  </tbody>
+</table>
