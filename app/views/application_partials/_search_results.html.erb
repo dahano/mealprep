@@ -1,11 +1,13 @@
 <!-- Too much logic for partial? maybe. -->
 <% if @macro.nil? %>
   <% if params[:search].blank? %>
-    <td></td>
+    <td>
+    </td>
   <% else %>
     <td>
+      <%= form_tag('/create_item', method: :get, :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#food-search-nav') %>
       Sorry, I couldnt find "<%= params[:search] %>"
-      <button type="button" class="btn btn-success">+ create item?</button>
+      <%= submit_tag('+ create item?', class: 'btn btn-success')%>
     </td>
   <% end %>
   <td>0g</td>
@@ -20,3 +22,7 @@
   <td><%= @macro.carbs %></td>
   <td><button type="button" class="btn btn-success">+ Add item</button></td>
 <% end %>
+
+<div class="modal fade" id="food-search-nav" role="dialog" aria-labelledby="myModalLabel">
+
+</div>

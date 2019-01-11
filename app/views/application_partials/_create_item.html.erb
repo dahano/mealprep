@@ -1,6 +1,30 @@
-<form class="form-inline">
-  <%= form_tag("/search/create_item", method: "get") do %>
-    <%= text_field_tag(:create, params[:create], placeholder: "Add Item", class: "form-control mr-sm-2" ) %>
-    <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
-  <% end %>
-</form>
+<div class="modal-dialog" id="create-food-item-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Food item +</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="col">
+            <p class="modal-item-text">Food name:</p>
+            <p class="modal-item-text">Protein per 1g:</p>
+            <p class="modal-item-text">Fat per 1g:</p>
+            <p class="modal-item-text">Carbs per 1g:</p>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Food name">
+            <input type="text" class="form-control" placeholder="Protein">
+            <input type="text" class="form-control" placeholder="Fats">
+            <input type="text" class="form-control" placeholder="Carbs">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>

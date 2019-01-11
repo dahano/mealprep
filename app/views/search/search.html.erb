@@ -6,7 +6,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>
+      <td id="search_form">
         <form action="<%= search_path %>" method="get">
           <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2" ) %>
           <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
