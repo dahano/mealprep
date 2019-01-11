@@ -1,5 +1,9 @@
 .daily-row {
-  padding: 10px;
+  padding: 0px;
+}
+
+.daily-column {
+
 }
 
 .header-row {
@@ -7,10 +11,19 @@
 }
 
 .daily-card {
-  margin-right: 10px;
+
 }
 
 .add-meal-button {
   width: 125px;
   align-self: center;
+}
+
+.new-meal-button {
+  width: 120px;
+  align-self: center;
+}
+
+.meal-card-header {
+  text-align: center;
 }
