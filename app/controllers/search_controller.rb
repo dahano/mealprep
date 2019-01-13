@@ -23,10 +23,10 @@ class SearchController < ApplicationController
     after_count = FoodItem.total_entries
     if after_count > before_count
       flash[:notice] = "Food item successfully created"
-      redirect_to '/'
     else
-      puts "Sad panda, something happened...."
+      flash[:error] = "Could not save food item"
     end
+    redirect_to '/'
   end
 
 end
