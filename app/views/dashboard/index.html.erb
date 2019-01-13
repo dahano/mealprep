@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row header-row justify-content-center">
-    <div class="col">
+  <div class="row header-row">
+    <div class="col-10">
       <!--  Rendering view for search -->
       <div class="table-responsive-sm">
         <table class="table">
@@ -12,18 +12,22 @@
           <tbody>
             <tr>
               <td>
-                <form action="<%= search_path %>" method="get">
-                  <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2" ) %>
-                  <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
-                  Search
-                  <% end %>
-                </form>
+                <nav class="navbar navbar-light bg-light">
+                  <form class="form-inline" action="<%= search_path %>" method="get">
+                    <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2", id: 'search-food-item', ) %>
+                    <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
+                    Search
+                    <% end %>
+                  </form>
+                </nav>
               </td>
               <th scope="col">Amount</th>
               <th scope="col">Protein</th>
               <th scope="col">Fat</th>
               <th scope="col">Carbs</th>
               <th></th>
+              <th></th>
+
             </tr>
             <tr>
               <%= render "application_partials/search_results" %>
@@ -32,22 +36,27 @@
         </table>
       </div>
     </div>
-    <div class="col-4" style="padding-left:100px;">
+    <!-- <div class="col-4" style="padding-left:100px;"> -->
       <!-- Rendering view for Daily Summary Card  -->
-      <%= render 'application_partials/daily_summary_card' %>
-    </div>
+      <%# <%= render 'application_partials/daily_summary_card' %>
+    <!-- </div> -->
   </div>
-  <div class="row">
-    <div class="col">
-      <h2 style="text-align-center">Low Carb</h2>
+  <h1 style="text-align: center">Weekly Meal Cards</h1>
+  <div class="row" style="padding-top: 50px;">
+    <div class="col h-100 d-inline-block odd-col daily-lane rounded">
+      <h2 style="text-align: center">Low Carb</h2>
+      <%= render 'application_partials/daily_meal_card' %>
+      <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
-    <div class="col">
-      <h2 style="text-align-center">No Carb</h2>
+    <div class="col daily-lane rounded">
+      <h2 style="text-align: center">No Carb</h2>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
-    <div class="col">
-      <h2 style="text-align-center">High Carb</h2>
+    <div class="col h-100 d-inline-block odd-col daily-lane rounded">
+      <h2 style="text-align: center">High Carb</h2>
+      <%= render 'application_partials/daily_meal_card' %>
+      <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
   </div>
