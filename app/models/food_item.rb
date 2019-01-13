@@ -7,12 +7,13 @@ class FoodItem < ApplicationRecord
 
   def self.add_item(name, protein, fat, carbs)
     # if food item doesnt exist, create it
-    if !FoodItem.where(name: "#{name}").first.nil?
+    if FoodItem.where(name: "#{name}").first.nil?
       FoodItem.create(name: name, protein: protein, fat: fat, carbs: carbs)
+      puts "ITEM CREATED!"
     else
       # return message that the item already exists
       puts "Item already exists meow meow"
-      raise ItemExistsError
+      raise "ItemExistsError"
     end
   end
 
@@ -26,5 +27,9 @@ class FoodItem < ApplicationRecord
     when 'carbs'
       item.carbs(value)
     end
+  end
+
+  def self.total_entries
+    return FoodItem.count
   end
 end
