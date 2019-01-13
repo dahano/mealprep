@@ -7,5 +7,9 @@ class SearchController < ApplicationController
   end
 
   def create_item
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 end
