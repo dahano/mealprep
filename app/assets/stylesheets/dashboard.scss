@@ -5,12 +5,25 @@
   padding: 0px;
 }
 
+#add-search-button{
+  margin: 7px;
+}
+
+.daily-card{
+  margin-top: 15px;
+}
+
+#create-food-modal{
+  margin-left: 10px;
+}
+
 .odd-col {
-  background-color:#e0f0e8;
+  background-color:#3dc166;
 }
 
 .daily-lane {
   padding: 18px;
+  border-top: 1px solid;
 }
 
 .header-row {
@@ -33,4 +46,8 @@
 
 .modal-item-text {
   text-align: center;
+}
+
+#meal-card-name {
+  width: 100%
 }

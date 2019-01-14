@@ -44,19 +44,28 @@
     </div>
   </div>
   <h1 style="text-align: center">Weekly Meal Cards</h1>
-  <div class="row" style="padding-top: 50px;">
+  <div class="row justify-content-md-center" style="padding-top: 50px;">
     <div class="col h-100 d-inline-block odd-col daily-lane rounded">
-      <h2 style="text-align: center">Low Carb</h2>
+      <div class="meal-card-header">
+        <h2 class="display-3" style="text-align: center">No Carb</h2>
+        <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
+      </div>
       <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
     <div class="col daily-lane rounded">
-      <h2 style="text-align: center">No Carb</h2>
+      <div class="meal-card-header">
+        <h2 class="display-3" style="text-align: center">High Carb</h2>
+        <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
+      </div>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
     <div class="col h-100 d-inline-block odd-col daily-lane rounded">
-      <h2 style="text-align: center">High Carb</h2>
+      <div class="meal-card-header">
+        <h2 class="display-3" style="text-align: center">Low Carb</h2>
+        <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
+      </div>
       <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
