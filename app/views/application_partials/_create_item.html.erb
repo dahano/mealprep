@@ -1,6 +1,5 @@
-<%= javascript_include_tag('modal.js') %>
-  <div class="modal-dialog" role="document" id="meow">
-    <%= form_for :create_food_item do |f| %>
+  <div class="modal-dialog" role="document">
+    <%= form_for :create_item, :url => create_item_url, :method => 'post' do |f| %>
     <div class="modal-content" id="create-food-item-modal">
       <div class="modal-header">
         <h5 class="modal-title">Create Food item +</h5>
@@ -17,7 +16,7 @@
             <p class="modal-item-text">Carbs per 1g:</p>
           </div>
           <div class="col">
-            <%= f.text_field :food_name, class: 'form-control', placeholder: "Food name" %>
+            <%= f.text_field :name, class: 'form-control', value: params[:search] %>
             <%= f.text_field :protein, class: 'form-control', placeholder: "Protein" %>
             <%= f.text_field :fat, class: 'form-control', placeholder: "Fat" %>
             <%= f.text_field :carbs, class: 'form-control', placeholder: "Carbs" %>

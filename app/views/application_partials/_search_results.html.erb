@@ -1,14 +1,17 @@
-<%= javascript_include_tag('modal.js') %>
+<%= javascript_include_tag('search_actions.js') %>
+
 <% if @macro.nil? %>
   <% if params[:search].blank? %>
     <td>
     </td>
   <% else %>
     <td>
-      <%= form_tag('/create_item', method: :get, :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#create-item-modal') %>
-      Sorry, I couldnt find "<%= params[:search] %>"
-      <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#meow">+ create item?</button> -->
-      <%= submit_tag('+ create item?', class: 'btn btn-success', 'data-toggle': "modal", 'data-target': "#create-item-modal") %>
+      <form>
+        Sorry, I couldnt find  "<%= params[:search] %>"
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+          + create item?
+        </button>
+      </form>
     </td>
   <% end %>
   <td>0g</td>
@@ -22,21 +25,14 @@
   <td><%= @macro.fat %></td>
   <td><%= @macro.carbs %></td>
   <td>
-  </td>
-  <td>
-    <label class="checkbox-inline" id="low-carb-radio">
-      <input type="checkbox" name="options" > Low Carb
-    </label>
-    <label class="checkbox-inline" id="no-carb-radio">
-      <input type="checkbox" name="options"> No Carb
-    </label>
-    <label class="checkbox-inline" id="high-carb-radio">
-      <input type="checkbox" name="options"> High Carb
-    </label>
-    <button type="button" class="btn btn-success">+ Add item</button>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary macro-type-button">Low Carb</button>
+      <button type="button" class="btn btn-secondary macro-type-button">No Carb</button>
+      <button type="button" class="btn btn-secondary macro-type-button">High Carb</button>
+    </div>
   </td>
 <% end %>
 
-<div class="modal fade hide" id="create-item-modal" tabindex="-1" role="dialog" aria-hidden="true">
-
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <%= render 'application_partials/create_item' %>
 </div>

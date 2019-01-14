@@ -1,15 +1,17 @@
 class FoodItem < ApplicationRecord
 
-  def self.find_food_item_name(item_name)
+  def self.search_item_by_name(item_name)
     @name = FoodItem.where(name: "#{item_name}").first
     @name
   end
 
-  def self.add_item(name, protein, fat, carbs)
+  def self.create_entry(name, protein, fat, carbs)
     # if food item doesnt exist, create it
     if FoodItem.where(name: "#{name}").first.nil?
-      FoodItem.create(name: name, protein: protein, fat: fat, carbs: carbs)
-      puts "ITEM CREATED!"
+      FoodItem.create(name: name,
+                      protein: protein,
+                      fat: fat,
+                      carbs: carbs)
     else
       # return message that the item already exists
       puts "Item already exists meow meow"
@@ -17,7 +19,7 @@ class FoodItem < ApplicationRecord
     end
   end
 
-  def self.update_item_by_name(name, macro, value)
+  def self.update_name(name, macro, value)
     item = FoodItem.where(name: name).first
     case macro.downcase
     when 'protein'
