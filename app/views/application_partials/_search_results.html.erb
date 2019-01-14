@@ -8,7 +8,7 @@
     <td>
       <form>
         Sorry, I couldnt find  "<%= params[:search] %>"
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createFoodModal" id="create-food-modal">
           + create item?
         </button>
       </form>
@@ -33,6 +33,6 @@
   </td>
 <% end %>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="createFoodModal" tabindex="-1" role="dialog" aria-labelledby="createFoodModalLabel" aria-hidden="true">
   <%= render 'application_partials/create_item' %>
 </div>
