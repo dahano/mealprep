@@ -21,9 +21,9 @@
 <% else %>
   <td><%= @macro.name %></td>
   <td>1g</td>
-  <td><%= @macro.protein %></td>
-  <td><%= @macro.fat %></td>
-  <td><%= @macro.carbs %></td>
+  <td class="card-protein"><%= @macro.protein %></td>
+  <td class="card-fat"><%= @macro.fat %></td>
+  <td class="card-carbs"><%= @macro.carbs %></td>
 <% end %>
 
 <div class="modal fade" id="createFoodModal" tabindex="-1" role="dialog" aria-labelledby="createFoodModalLabel" aria-hidden="true">

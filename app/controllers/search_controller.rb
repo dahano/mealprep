@@ -14,7 +14,6 @@ class SearchController < ApplicationController
   end
 
   def create_item
-    puts "did i get here?"
     food_name = params["create_item"]["name"]
     protein = params["create_item"]["protein"]
     fat = params["create_item"]["fat"]

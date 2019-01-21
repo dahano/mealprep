@@ -1,27 +1,33 @@
 <div class="card daily-card" >
-  <ul class="list-group list-group-flush">
+  <ul class="list-group list-group-flush meal-list">
     <li class="list-group-item"><h1 class="display-4 meal-card-header">meal 1</h1></li>
-    <li class="list-group-item">
-      <ul class="list-inline">
-        <li class="list-inline-item">Protein 80g</li>
-        <li class="list-inline-item">Fat 200g</li>
-        <li class="list-inline-item">Carbs 325g</li>
-      </ul>
-    </li>
-    <li class="list-group-item">
-      <ul class="list-inline">
-        <li id="meal-card-name" class="list-inline-item">Salmon 140g</li>
-        <li id="meal-card-protein" class="list-inline-item">Protein 200g</li>
-        <li id="meal-card-fat" class="list-inline-item">Fat 325g</li>
-        <li id="meal-card-carbs" class="list-inline-item">Carbs 325g</li>
-      </ul>
-    </li>
     <div class="meal-card-header">
       <% if @macro.nil? %>
-        <p></p>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addFoodToCardModal" id="add-search-button" disabled>
+        + Add from search
+      </button>
       <% else %>
-        <button type="button" id="add-search-button" class="btn btn-success btn-sm">+ Add from search</button>
+      <form action="index.html" method="get">
+        <button type="button" class="btn btn-success add-search-btn" data-toggle="modal" data-target="#addFoodToCardModal" id="add-search-button">
+          + Add from search
+        </button>
+      </form>
       <% end %>
+    </div>
+    <li class="list-group-item">
+      <ul class="list-inline">
+        <li class="list-inline-item card-protein">Protein 80g</li>
+        <li class="list-inline-item card-fat">Fat 200g</li>
+        <li class="list-inline-item card-carbs">Carbs 325g</li>
+      </ul>
+    </li>
+    <li class="list-group-item">
+      <ul class="list-inline meal-card-list">
+        <li class="list-inline-item list-group-item">Salmon 140g | 200g | 325g | 325g</li>
+      </ul>
+    </li>
+    <div class="modal fade" id="addFoodToCardModal" tabindex="-1" role="dialog" aria-labelledby="createFoodModalLabel" aria-hidden="true">
+      <%= render 'application_partials/add_food_to_card' %>
     </div>
   </ul>
 </div>

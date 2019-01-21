@@ -18,12 +18,11 @@
 }
 
 .odd-col {
-  background-color:#3dc166;
+  background-color:#f2f2f2;
 }
 
 .daily-lane {
   padding: 18px;
-  border-top: 1px solid;
 }
 
 .header-row {
@@ -50,4 +49,16 @@
 
 #meal-card-name {
   width: 100%
+}
+
+.card-protein {
+  color: #1f8d67;
+}
+
+.card-fat {
+  color: #2fadcd;
+}
+
+.card-carbs {
+  color: #cd2fbe;
 }
