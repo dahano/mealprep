@@ -22,7 +22,7 @@
             <tr>
               <td>
                 <nav class="navbar navbar-light bg-light">
-                  <form class="form-inline" action="<%= search_path %>" method="get">
+                  <form class="form-inline" action="<%= search_path %>" method="get" remote = true>
                     <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2", id: 'search-food-item', ) %>
                     <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
                     Search
@@ -31,11 +31,11 @@
                 </nav>
               </td>
               <th scope="col">Amount</th>
-              <th scope="col">Protein</th>
-              <th scope="col">Fat</th>
-              <th scope="col">Carbs</th>
+              <th scope="col" class="card-protein">Protein</th>
+              <th scope="col" class="card-fat">Fat</th>
+              <th scope="col" class="card-carbs">Carbs</th>
             </tr>
-            <tr>
+            <tr id="searchForm">
               <%= render "application_partials/search_results" %>
             </tr>
           </tbody>
@@ -45,29 +45,28 @@
   </div>
   <h1 style="text-align: center">Weekly Meal Cards</h1>
   <div class="row justify-content-md-center" style="padding-top: 50px;">
+    <!-- No Carb column starts here -->
     <div class="col h-100 d-inline-block odd-col daily-lane rounded">
       <div class="meal-card-header">
         <h2 class="display-3" style="text-align: center">No Carb</h2>
         <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
       </div>
       <%= render 'application_partials/daily_meal_card' %>
-      <%= render 'application_partials/daily_meal_card' %>
-      <%= render 'application_partials/daily_meal_card' %>
     </div>
-    <div class="col daily-lane rounded">
+    <!-- High Carb column starts here  -->
+    <div class="col daily-lane rounded" style="background-color: #c5e0d2">
       <div class="meal-card-header">
         <h2 class="display-3" style="text-align: center">High Carb</h2>
         <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
       </div>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
+    <!-- Low Carb column starts here -->
     <div class="col h-100 d-inline-block odd-col daily-lane rounded">
       <div class="meal-card-header">
         <h2 class="display-3" style="text-align: center">Low Carb</h2>
         <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
       </div>
-      <%= render 'application_partials/daily_meal_card' %>
-      <%= render 'application_partials/daily_meal_card' %>
       <%= render 'application_partials/daily_meal_card' %>
     </div>
   </div>

@@ -1,0 +1,16 @@
+<tr>
+  <td>
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline" action="<%= search_path %>" method="get" remote = true>
+        <%= text_field_tag(:search, params[:search], placeholder: "Search food item", autofocus: true, class: "form-control mr-sm-2", id: 'search-food-item', ) %>
+        <%= button_tag(type: :submit, class: 'btn btn-outline-success my-2 my-sm-0') do %>
+        Search
+        <% end %>
+      </form>
+    </nav>
+  </td>
+  <th scope="col">Amount</th>
+  <th scope="col" class="card-protein">Protein</th>
+  <th scope="col" class="card-fat">Fat</th>
+  <th scope="col" class="card-carbs">Carbs</th>
+</tr>

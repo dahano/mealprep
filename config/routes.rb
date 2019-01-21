@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'application#index'
+  root 'dashboard#index'
   get 'search', to: 'search#search'
   get 'dashboard', to: 'dashboard#index', as: :dashboard
   get 'summon_modal' => 'search#summon_modal', as: :summon_modal
