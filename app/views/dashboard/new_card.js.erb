@@ -1,0 +1,13 @@
+var carbColum = {
+  noCarb: ".nocarb",
+  highCarb: ".highcarb",
+  lowCarb: ".lowcarb"
+}
+carbs = ("<%= escape_javascript(@carbs) %>")
+if (carbs === 'no-carbs') {
+  $(".nocarb").append("<%= escape_javascript(render 'application_partials/daily_meal_card') %>");
+} else if (carbs === 'high-carbs') {
+  $(".highcarb").append("<%= escape_javascript(render 'application_partials/daily_meal_card') %>");
+} else {
+  $(".lowcarb").append("<%= escape_javascript(render 'application_partials/daily_meal_card') %>");
+}

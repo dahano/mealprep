@@ -46,28 +46,46 @@
   <h1 style="text-align: center">Weekly Meal Cards</h1>
   <div class="row justify-content-md-center" style="padding-top: 50px;">
     <!-- No Carb column starts here -->
-    <div class="col h-100 d-inline-block odd-col daily-lane rounded">
+    <div class="col h-100 d-inline-block odd-col daily-lane rounded" id="noCarbCol">
       <div class="meal-card-header">
         <h2 class="display-3" style="text-align: center">No Carb</h2>
-        <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
+        <%= form_tag '/new_meal_card', method: :post, remote: true do %>
+          <%= hidden_field_tag "carbs", "no-carbs" %>
+          <%= submit_tag "+ New Meal", class: "btn btn-success new-meal-button" %>
+        <% end %>
       </div>
       <%= render 'application_partials/daily_meal_card' %>
+      <div class="nocarb">
+
+      </div>
     </div>
     <!-- High Carb column starts here  -->
-    <div class="col daily-lane rounded" style="background-color: #c5e0d2">
+    <div class="col daily-lane rounded" style="background-color: #c5e0d2" id="highCarbCol">
       <div class="meal-card-header">
         <h2 class="display-3" style="text-align: center">High Carb</h2>
-        <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
+        <%= form_tag '/new_meal_card', method: :post, remote: true do %>
+          <%= hidden_field_tag "carbs", "high-carbs" %>
+          <%= submit_tag "+ New Meal", class: "btn btn-success new-meal-button" %>
+        <% end %>
       </div>
       <%= render 'application_partials/daily_meal_card' %>
+      <div class="highcarb">
+
+      </div>
     </div>
     <!-- Low Carb column starts here -->
-    <div class="col h-100 d-inline-block odd-col daily-lane rounded">
+    <div class="col h-100 d-inline-block odd-col daily-lane rounded" id="lowCarbCol">
       <div class="meal-card-header">
         <h2 class="display-3" style="text-align: center">Low Carb</h2>
-        <button type="button" class="btn btn-success new-meal-button" style="">+ New Meal</button>
+        <%= form_tag '/new_meal_card', method: :post, remote: true do %>
+          <%= hidden_field_tag "carbs", "low-carbs" %>
+          <%= submit_tag "+ New Meal", class: "btn btn-success new-meal-button" %>
+        <% end %>
       </div>
       <%= render 'application_partials/daily_meal_card' %>
+      <div class="lowcarb">
+
+      </div>
     </div>
   </div>
 </div>
