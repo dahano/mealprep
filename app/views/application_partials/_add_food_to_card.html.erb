@@ -11,17 +11,14 @@
     <div class="modal-body">
       <div class="form-row">
         <div class="col">
-          <p class="modal-item-text">Food name:</p>
           <p class="modal-item-text">oz or g:</p>
         </div>
         <div class="col">
-          <input class="form-control"  id="meal-card-name" type="text" name="" value="<%= params[:search] %>">
           <input class="form-control"  id="meal-card-amount" type="text" name="" placeholder="amount example: 150" value="">
         </div>
       </div>
     </div>
     <div class="modal-footer">
-      <%# <%= f.submit "+ Add to card", class: "btn btn-secondary close-modal" %>
       <button type="button" class="btn btn-secondary" id="add-card-btn" data-dismiss="modal" onclick="addFoodItemsToList()">+ Add to card</button>
       <button type="button" class="btn btn-secondary close-modal" data-dismiss="modal">Close</button>
     </div>

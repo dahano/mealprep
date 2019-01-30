@@ -3,13 +3,15 @@ class SearchController < ApplicationController
   def search
     @macro = FoodItem.search_item_by_name(params[:search])
     @macro
-    render 'dashboard/index'
+    # render 'dashboard/index'
+    respond_to do |format|
+      format.js 
+    end
   end
 
   def summon_modal
     respond_to do |format|
       format.html
-      format.js
     end
   end
 
